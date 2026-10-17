@@ -1,0 +1,194 @@
+[
+  {
+    "id": "romero",
+    "nombre": "Romero",
+    "nombre_cientifico": "Salvia rosmarinus",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "calido"],
+    "descripcion": "Arbusto aromático de hojas finas como agujas y pequeñas flores azul-lila. Sus flores son una fuente de néctar para abejas y otros polinizadores pequeños.",
+    "caracteristicas": [
+      "Arbusto perenne de 1 a 2 m de alto",
+      "Hojas muy aromáticas que también se usan en la cocina",
+      "Flores pequeñas de color azul-lila"
+    ],
+    "condiciones": [
+      "Sol directo la mayor parte del día",
+      "Suelo arenoso y bien drenado",
+      "Poco riego: tolera la sequía, pero no el encharcamiento"
+    ],
+    "nombres_locales": {
+      "Romero": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
+      "Alecrim": ["BR"]
+    },
+    "imagen": "assets/romero.jpg"
+  },
+  {
+    "id": "lantana",
+    "nombre": "Lantana (Cinco negritos)",
+    "nombre_cientifico": "Lantana camara",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "calido"],
+    "descripcion": "Arbusto de flores en racimos que cambian de color con el tiempo. Es muy visitado por mariposas.",
+    "caracteristicas": [
+      "Arbusto de 0.5 a 2 m de alto",
+      "Racimos de flores amarillas, naranjas, rosas o rojas",
+      "Sus frutos verdes son tóxicos y en algunas regiones se comporta como planta invasora"
+    ],
+    "condiciones": [
+      "Sol directo",
+      "Tolera suelos pobres y sequía una vez establecida",
+      "No resiste heladas"
+    ],
+    "nombres_locales": {
+      "Cinco negritos": ["MX", "CO"],
+      "Venturosa": ["CO"],
+      "Camará": ["AR", "BR"],
+      "Lantana": ["CR", "SV", "NI", "CO", "EC", "PE", "BO", "CL"]
+    },
+    "imagen": ""
+  },
+  {
+    "id": "lavanda",
+    "nombre": "Lavanda",
+    "nombre_cientifico": "Lavandula angustifolia",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "frio"],
+    "descripcion": "Subarbusto aromático de espigas moradas muy fragantes. Sus flores atraen a abejas y abejorros.",
+    "caracteristicas": [
+      "Mata compacta de 40 a 90 cm",
+      "Espigas de flores moradas en primavera y verano",
+      "Aroma intenso en flores y hojas"
+    ],
+    "condiciones": [
+      "Sol directo",
+      "Suelo bien drenado, incluso pedregoso",
+      "Poco riego: no tolera el exceso de humedad. Resiste bien el frío"
+    ],
+    "nombres_locales": {
+      "Lavanda": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
+      "Alhucema": ["CO"],
+      "Alfazema": ["BR"]
+    },
+    "imagen": ""
+  },
+  {
+    "id": "bugambilia",
+    "nombre": "Bugambilia",
+    "nombre_cientifico": "Bougainvillea spp.",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "calido"],
+    "descripcion": "Arbusto trepador cubierto de hojas de colores intensos que rodean flores pequeñas y blancas, que ofrecen néctar a abejas, mariposas y colibríes.",
+    "caracteristicas": [
+      "Trepadora con espinas que puede cubrir muros y rejas",
+      "Lo que parecen pétalos son hojas modificadas (brácteas) magenta, rosas, naranjas o blancas",
+      "Florece abundantemente en temporada soleada"
+    ],
+    "condiciones": [
+      "Sol directo",
+      "Suelo bien drenado",
+      "Riego moderado: florece más si se deja secar entre riegos. Sensible a heladas"
+    ],
+    "nombres_locales": {
+      "Bugambilia": ["MX"],
+      "Veranera": ["CR", "SV", "NI"],
+      "Trinitaria": ["CO"],
+      "Buganvilla": ["EC", "PE", "CL"],
+      "Napoleón": ["PE", "CL"],
+      "Santa Rita": ["BO", "AR"],
+      "Primavera": ["BR"]
+    },
+    "imagen": ""
+  },
+  {
+    "id": "salvia_azul",
+    "nombre": "Salvia azul",
+    "nombre_cientifico": "Salvia farinacea",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "frio"],
+    "descripcion": "Planta de espigas erguidas con flores azul-violeta sobre follaje gris-verdoso. Muy visitada por abejas y mariposas.",
+    "caracteristicas": [
+      "Mata de 40 a 90 cm de alto",
+      "Floración larga, de primavera a otoño",
+      "Follaje aromático de tono gris-verdoso"
+    ],
+    "condiciones": [
+      "Sol directo o muy poca sombra",
+      "Suelo bien drenado",
+      "Riego moderado: tolera la sequía una vez establecida. En frío intenso puede comportarse como planta anual"
+    ],
+    "nombres_locales": {
+      "Salvia azul": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
+      "Sálvia-azul": ["BR"]
+    },
+    "imagen": ""
+  },
+  {
+    "id": "verbena",
+    "nombre": "Verbena",
+    "nombre_cientifico": "Verbena bonariensis",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "calido", "frio"],
+    "descripcion": "Planta alta y ligera de tallos finos con ramilletes de flores lilas. Atrae mariposas y abejas.",
+    "caracteristicas": [
+      "Tallos delgados de 1 a 1.5 m de alto",
+      "Ramilletes de flores lilas durante muchos meses",
+      "Se resiembra sola con facilidad"
+    ],
+    "condiciones": [
+      "Sol directo",
+      "Suelo bien drenado, tolera suelos pobres",
+      "Riego moderado: resiste periodos secos. Tolera frío suave"
+    ],
+    "nombres_locales": {
+      "Verbena": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"]
+    },
+    "imagen": ""
+  },
+  {
+    "id": "gazania",
+    "nombre": "Gazania",
+    "nombre_cientifico": "Gazania rigens",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["arido", "templado", "calido"],
+    "descripcion": "Planta baja de flores grandes tipo margarita en tonos naranja, amarillo, rojo y rosa. Atrae abejas y mariposas.",
+    "caracteristicas": [
+      "Mata baja de 15 a 30 cm",
+      "Las flores se abren con el sol y se cierran con nubes o al atardecer",
+      "Hojas plateadas por debajo"
+    ],
+    "condiciones": [
+      "Pleno sol: sin sol casi no abre",
+      "Suelo drenado, tolera suelos pobres y arenosos",
+      "Poco riego: resiste la sequía. No tolera heladas fuertes"
+    ],
+    "nombres_locales": {
+      "Gazania": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
+      "Gazânia": ["BR"]
+    },
+    "imagen": ""
+  },
+  {
+    "id": "buddleja",
+    "nombre": "Buddleja (Arbusto de las mariposas)",
+    "nombre_cientifico": "Buddleja davidii",
+    "paises_disponibles": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+    "climas_compatibles": ["templado", "frio"],
+    "descripcion": "Arbusto de espigas largas y perfumadas en lila, rosa o blanco que atraen a muchas mariposas, de ahí su nombre popular.",
+    "caracteristicas": [
+      "Arbusto de 1.5 a 3 m de alto",
+      "Floración de verano a otoño",
+      "Se poda fuerte para que rebrote; en algunas regiones puede volverse invasora"
+    ],
+    "condiciones": [
+      "Sol directo",
+      "Suelo bien drenado",
+      "Riego moderado. Resiste bien el frío"
+    ],
+    "nombres_locales": {
+      "Buddleja": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"],
+      "Arbusto de las mariposas": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
+      "Arbusto-das-borboletas": ["BR"]
+    },
+    "imagen": ""
+  }
+]

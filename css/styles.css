@@ -1,0 +1,246 @@
+/*COLORES COMO VARIABLES*/
+:root {
+  --selva: #0f2a24;
+  --selva-clara: #17403a;
+  --hueso: #ece4d0;
+  --azul-maya: #3fb8c4;
+  --bugambilia: #d9467a;
+
+  --fuente-titulo: "Uncial Antiqua", Georgia, serif;
+  --fuente-texto: "Alegreya Sans", "Segoe UI", sans-serif;
+}
+
+/*FORMATIO A TODO*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--selva);
+  color: var(--hueso);
+  font-family: var(--fuente-texto);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.25rem 4rem;
+}
+
+/*ENCABEZADOS*/
+/*ALINEADO DEL TEXTO Y EL MARGEN*/
+.encabezado {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+/*ATRIBUTOS DEL LOGO*/
+.logo {
+  margin: 0;
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  font-size: clamp(4.5rem, 20vw, 12rem);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--hueso);
+  text-shadow: 0.04em 0.04em 0 var(--bugambilia);
+}
+
+/*FORMULARIO*/
+main {
+  width: 100%;
+  max-width: 34rem;
+}
+/*CONTENEDOR DEL FORMULARIO(lo de atras)*/
+.panel {
+  background: var(--selva-clara);
+  border: 2px solid var(--azul-maya);
+  padding: 2rem 1.75rem 2.25rem;
+  /* esquinas escalonadas, como un relieve de piedra */
+  clip-path: polygon(
+    0 18px, 18px 18px, 18px 0,
+    calc(100% - 18px) 0, calc(100% - 18px) 18px, 100% 18px,
+    100% calc(100% - 18px), calc(100% - 18px) calc(100% - 18px), calc(100% - 18px) 100%,
+    18px 100%, 18px calc(100% - 18px), 0 calc(100% - 18px)
+  );
+}
+/*TITULO DEL FORMULARIO*/
+.panel h2 {
+  margin: 0 0 1.75rem;
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 6vw, 2.1rem);
+  line-height: 1.2;
+}
+
+/*CAMPOS (pregunta)*/
+.campo {
+  margin-bottom: 1.5rem;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+/*SELECCIONES DEL FORMULARIO*/
+select {
+  width: 100%;
+  padding: 0.8rem 2.75rem 0.8rem 1rem;
+  font: inherit;
+  color: var(--hueso);
+  background-color: var(--selva);
+  border: 2px solid var(--hueso);
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+  background-position: right 1rem center;
+}
+/*COLOR LETRAS INVALIDO*/
+select:invalid {
+  color: rgba(236, 228, 208, 0.65);
+}
+/*COLOR DE LA SELECCION*/
+select option {
+  color: var(--hueso);
+  background: var(--selva);
+}
+
+/* ---------- Botón ---------- */
+.boton {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.9rem 1rem;
+  font-family: var(--fuente-titulo);
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  color: var(--selva);
+  background: var(--bugambilia);
+  border: 2px solid var(--bugambilia);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.boton:hover {
+  background: var(--hueso);
+  border-color: var(--hueso);
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 480px) {
+  body {
+    padding-top: 2rem;
+  }
+
+  .panel {
+    padding: 1.5rem 1.25rem 1.75rem;
+  }
+}
+
+/*INFORMACION (imagen + textos)*/
+/*CONTENEDOR: imagen a la izquierda, textos a la derecha*/
+.info {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 3rem;
+  width: 100%;
+  max-width: 62rem;
+  margin-bottom: 3.5rem;
+}
+
+/*ESPACIO DE LA IMAGEN (vacio por ahora)*/
+.foto {
+  aspect-ratio: 9 / 11;
+  background: var(--selva-clara);
+  border: 2px solid var(--azul-maya);
+}
+
+/*COLUMNA DE TEXTOS Y LINEA FINAL*/
+.textos {
+  border-bottom: 1px solid var(--hueso);
+}
+
+/*CADA BLOQUE CON SU LINEA ARRIBA*/
+.textos section {
+  border-top: 1px solid var(--hueso);
+  padding: 1rem 0 2.5rem;
+}
+
+/*SUBTITULOS*/
+.textos h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/*DESCRIPCIONES*/
+.textos p {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 1rem;
+}
+
+.textos p + p {
+  margin-top: 1rem;
+}
+
+/* ---------- Celular: imagen arriba, textos abajo ---------- */
+@media (max-width: 700px) {
+  .info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/*RESULTADOS DEL FORMULARIO*/
+.resultados {
+  width: 100%;
+  max-width: 62rem;
+  margin-top: 3.5rem;
+}
+
+.resultados > h2 {
+  margin: 0 0 2rem;
+  font-family: var(--fuente-titulo);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 6vw, 2.1rem);
+}
+
+/*CADA PLANTA: reusa .info, .textos y .foto (texto a la izquierda, foto a la derecha)*/
+@media (min-width: 701px) {
+  .flor {
+    grid-template-columns: minmax(0, 9fr) minmax(0, 13fr);
+  }
+
+  .flor .foto {
+    align-self: start;
+  }
+}
+
+/*LISTAS Y FOTO REAL*/
+.textos ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  max-width: 92ch;
+  font-size: 1rem;
+}
+
+.foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*CELULAR: la foto va arriba*/
+@media (max-width: 700px) {
+  .flor .foto {
+    order: -1;
+  }
+}
