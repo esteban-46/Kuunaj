@@ -45,7 +45,7 @@
       "Camará": ["AR", "BR"],
       "Lantana": ["CR", "SV", "NI", "CO", "EC", "PE", "BO", "CL"]
     },
-    "imagen": ""
+    "imagen": "assets/lantana.jpg"
   },
   {
     "id": "lavanda",
@@ -69,7 +69,7 @@
       "Alhucema": ["CO"],
       "Alfazema": ["BR"]
     },
-    "imagen": ""
+    "imagen": "assets/lavanda.jpg"
   },
   {
     "id": "bugambilia",
@@ -97,7 +97,7 @@
       "Santa Rita": ["BO", "AR"],
       "Primavera": ["BR"]
     },
-    "imagen": ""
+    "imagen": "assets/bugambilia.jpg"
   },
   {
     "id": "salvia_azul",
@@ -120,7 +120,7 @@
       "Salvia azul": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
       "Sálvia-azul": ["BR"]
     },
-    "imagen": ""
+    "imagen": "assets/azul.jpg"
   },
   {
     "id": "verbena",
@@ -142,7 +142,7 @@
     "nombres_locales": {
       "Verbena": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "BR", "CL"]
     },
-    "imagen": ""
+    "imagen": "assets/verbena.jpg"
   },
   {
     "id": "gazania",
@@ -165,7 +165,7 @@
       "Gazania": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
       "Gazânia": ["BR"]
     },
-    "imagen": ""
+    "imagen": "assets/garzania.jpg"
   },
   {
     "id": "buddleja",
@@ -189,6 +189,6 @@
       "Arbusto de las mariposas": ["MX", "CR", "SV", "NI", "CO", "EC", "PE", "BO", "AR", "CL"],
       "Arbusto-das-borboletas": ["BR"]
     },
-    "imagen": ""
+    "imagen": "assets/buddleja.jpg"
   }
 ]

@@ -223,6 +223,12 @@ select option {
   }
 }
 
+.flor .textos section:first-child h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
 /*LISTAS Y FOTO REAL*/
 .textos ul {
   margin: 0;
