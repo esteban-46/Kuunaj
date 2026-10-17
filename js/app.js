@@ -1,8 +1,9 @@
-/*RUTA DEL JSON (cambiala si lo guardas en otra carpeta)*/
+/*RUTA DEL JSON*/
 const RUTA_JSON = "data/flores.json";
+/*CANTIDAD DE PLANTAS*/
 const CANTIDAD = 3;
 
-/*PAISES: valor del formulario -> [codigo del JSON, nombre para mostrar]*/
+/*ASOCIACION DEL FORMULARIO CON EL JSON MEDIANTE OBJETOS CON ARREGLOS*/
 const PAISES = {
   "costa-rica": ["CR", "Costa Rica"],
   "el-salvador": ["SV", "El Salvador"],
@@ -16,13 +17,13 @@ const PAISES = {
   "brasil": ["BR", "Brasil"],
   "chile": ["CL", "Chile"]
 };
-/*CODIGO -> NOMBRE (ej. "MX" -> "México")*/
+/*RELACIONAR EL CODIGO CON EL PAIS*/
 const NOMBRE_PAIS = Object.fromEntries(Object.values(PAISES));
 
 const formulario = document.getElementById("formulario");
 const resultados = document.getElementById("resultados");
 
-/*CARGAR EL JSON UNA SOLA VEZ AL ABRIR LA PAGINA*/
+/*CARGAR EL JSON AL ABRIR LA PAGINA*/
 const carga = fetch(RUTA_JSON)
   .then((r) => {
     if (!r.ok) throw new Error(r.status);
@@ -30,7 +31,8 @@ const carga = fetch(RUTA_JSON)
   })
   .catch(() => null);
 
-/*REVOLVER LA LISTA (para que no salgan siempre las mismas)*/
+/*REVOLVER LA LISTA SI SALEN MAS DE 3*/
+/**/
 function mezclar(lista) {
   return lista
     .map((f) => [Math.random(), f])
@@ -38,11 +40,12 @@ function mezclar(lista) {
     .map((par) => par[1]);
 }
 
+/*CONVERSION DE VARIABLES A TEXTO*/
 function lista(items) {
   return `<ul>${items.map((i) => `<li>${i}</li>`).join("")}</ul>`;
 }
 
-/*"COMO SE LE CONOCE": agrupa por nombre y pone primero el de tu pais*/
+/*ASOCIA UNA PLANTA CON LOS PAISES QUE LA CONTIENEN*/
 function nombresLocales(flor, codigo) {
   const total = Object.keys(NOMBRE_PAIS).length;
   const items = Object.entries(flor.nombres_locales)
@@ -56,7 +59,7 @@ function nombresLocales(flor, codigo) {
   return lista(items);
 }
 
-/*TARJETA DE UNA PLANTA: texto a la izquierda, foto a la derecha*/
+/*CREAR EL IMG DEL HTML CON LA INFORMACION DEL JSON*/
 function tarjeta(flor, codigo) {
   const foto = flor.imagen ? `<img src="${flor.imagen}" alt="${flor.nombre}">` : "";
   return `
@@ -84,21 +87,20 @@ function tarjeta(flor, codigo) {
     </article>`;
 }
 
+/*BORRADO DE BUSQUEDA(enseña las 3 plantas), OCULTA LA SECCION HASTA DAR ENVIAR, TRANSICION*/
 function mostrar(html) {
   resultados.innerHTML = html;
   resultados.hidden = false;
   resultados.scrollIntoView({ behavior: "smooth" });
 }
 
-/*AL ENVIAR EL FORMULARIO*/
+/*ENVIO EL FORMULARIO*/
 formulario.addEventListener("submit", async (e) => {
+  /*HACE QUE NO REINICIE PAGINA*/
   e.preventDefault();
-
+ 
+  /*CARGA DEL JSON ANTES DE ENVIAR EL FORMULARIO*/
   const flores = await carga;
-  if (!flores) {
-    mostrar("<p>No se pudo cargar flores.json. Si abriste index.html directo desde la carpeta, ábrelo con un servidor local (por ejemplo, Live Server).</p>");
-    return;
-  }
 
   const [codigo] = PAISES[formulario.elements.pais.value];
   const clima = formulario.elements.clima.value;
@@ -107,10 +109,6 @@ formulario.addEventListener("submit", async (e) => {
     flores.filter((f) => f.paises_disponibles.includes(codigo) && f.climas_compatibles.includes(clima))
   ).slice(0, CANTIDAD);
 
-  if (elegidas.length === 0) {
-    mostrar("<p>No encontramos plantas para esa combinación.</p>");
-    return;
-  }
 
   mostrar(`<h2>Plantas para ti</h2>${elegidas.map((f) => tarjeta(f, codigo)).join("")}`);
 });

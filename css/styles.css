@@ -109,7 +109,7 @@ select option {
   background: var(--selva);
 }
 
-/* ---------- Botón ---------- */
+/*BOTON ENVIAR*/
 .boton {
   display: block;
   width: 100%;
@@ -126,24 +126,14 @@ select option {
   transition: background 0.15s, color 0.15s;
 }
 
+/*CAMBIO DE COLOR DEL BOTON*/
 .boton:hover {
   background: var(--hueso);
   border-color: var(--hueso);
 }
 
-/* ---------- Pantallas pequeñas ---------- */
-@media (max-width: 480px) {
-  body {
-    padding-top: 2rem;
-  }
-
-  .panel {
-    padding: 1.5rem 1.25rem 1.75rem;
-  }
-}
-
-/*INFORMACION (imagen + textos)*/
-/*CONTENEDOR: imagen a la izquierda, textos a la derecha*/
+/*INFORMACION DE LAS PLANTAS*/
+/*CONTENEDOR DE LA INFORMACION*/
 .info {
   display: grid;
   grid-template-columns: 5fr 6fr;
@@ -153,19 +143,19 @@ select option {
   margin-bottom: 3.5rem;
 }
 
-/*ESPACIO DE LA IMAGEN (vacio por ahora)*/
+/*IMAGENES*/
 .foto {
   aspect-ratio: 9 / 11;
   background: var(--selva-clara);
   border: 2px solid var(--azul-maya);
 }
 
-/*COLUMNA DE TEXTOS Y LINEA FINAL*/
+/*TEXTOS Y LINEA DIVISORA*/
 .textos {
   border-bottom: 1px solid var(--hueso);
 }
 
-/*CADA BLOQUE CON SU LINEA ARRIBA*/
+/*LINEA DE TEXTO*/
 .textos section {
   border-top: 1px solid var(--hueso);
   padding: 1rem 0 2.5rem;
@@ -190,7 +180,7 @@ select option {
   margin-top: 1rem;
 }
 
-/* ---------- Celular: imagen arriba, textos abajo ---------- */
+/*CELULARES*/
 @media (max-width: 700px) {
   .info {
     grid-template-columns: 1fr;
@@ -198,13 +188,14 @@ select option {
   }
 }
 
-/*RESULTADOS DEL FORMULARIO*/
+/*RESULTADOS DEL FORMULARIO (3 plantas)*/
+/*CONTENEDOR DE RESULTADOS*/
 .resultados {
   width: 100%;
   max-width: 62rem;
   margin-top: 3.5rem;
 }
-
+/*SUBTITULOS*/
 .resultados > h2 {
   margin: 0 0 2rem;
   font-family: var(--fuente-titulo);
@@ -212,7 +203,7 @@ select option {
   font-size: clamp(1.6rem, 6vw, 2.1rem);
 }
 
-/*CADA PLANTA: reusa .info, .textos y .foto (texto a la izquierda, foto a la derecha)*/
+/*FORMATO DE IMAGEN Y TEXTO*/
 @media (min-width: 701px) {
   .flor {
     grid-template-columns: minmax(0, 9fr) minmax(0, 13fr);
@@ -223,13 +214,14 @@ select option {
   }
 }
 
+/*TAMAÑO DEL NOMBRE DE LA PLANTA*/
 .flor .textos section:first-child h2 {
   font-family: var(--fuente-titulo);
   font-size: 1.6rem;
   line-height: 1.2;
 }
 
-/*LISTAS Y FOTO REAL*/
+/*LISTAS(caracteristicas) Y FOTO REAL*/
 .textos ul {
   margin: 0;
   padding-left: 1.25rem;
@@ -237,6 +229,7 @@ select option {
   font-size: 1rem;
 }
 
+/*IMAGENES*/
 .foto img {
   display: block;
   width: 100%;
